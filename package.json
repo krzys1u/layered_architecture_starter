@@ -3,11 +3,14 @@
     "start": "node src/server.js",
     "watch": "nodemon src/server.js",
     "test:unit": "mocha test/unit",
-    "test:component": "mocha test/component",
+    "test:component": "mocha --exit test/component",
     "test": "npm-run-all --parallel test:*"
   },
   "dependencies": {
+    "@hapi/joi": "^16.1.8",
     "express": "4.17.1",
+    "hbs": "^4.0.6",
+    "lodash.mapvalues": "^4.6.0",
     "mongodb": "3.3.4"
   },
   "devDependencies": {
