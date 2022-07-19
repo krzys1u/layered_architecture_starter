@@ -39,7 +39,7 @@ describe("Book controller", function() {
         assert.equal(res.redirect.invokeWith, `/book/${req.body.isbn}`)
     });
 
-    xit("should properly return details", async function() {
+    it("should properly return details", async function() {
         const controller = buildController({}, {
             findOne: (isbn) => {
                 return BOOK_MOCK
@@ -48,8 +48,15 @@ describe("Book controller", function() {
 
         let t = {};
 
-        await controller.details({params: {isbn:'1'}}, {json: (d) => {t=d}}, () => {});
+        await controller.details({params: {isbn:'1'}}, {
+            json(d) {
+                t=d
+            },
+            format(d) {
+                return d.default();
+            }
+        });
 
-        assert.equal(t, BOOK_MOCK);
+        assert.equal(t.book, BOOK_MOCK);
     });
 });
