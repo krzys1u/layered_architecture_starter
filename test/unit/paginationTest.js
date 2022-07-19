@@ -1,5 +1,5 @@
 const assert = require("assert");
-const generatePages = require("../../src/generatePages");
+const generatePages = require("../../src/utils/generatePages");
 
 describe("generate pages", function () {
   it("first page on initial list", function () {

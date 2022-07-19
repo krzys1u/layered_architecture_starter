@@ -1,5 +1,5 @@
 module.exports = (db) => {
-   const books = db.collection('books');
+  const books = db.collection('books');
 
   async function createOrUpdate(book) {
     await books.updateOne(

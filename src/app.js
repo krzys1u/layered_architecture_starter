@@ -1,14 +1,13 @@
 module.exports = (db) => {
   const express = require("express");
-  const booksRoutesFactory = require('./bookRoutes');
+  const booksRoutesFactory = require('./routes/bookRoutes');
 
-  const { notFound, error } = require('./error');
+  const { notFound, error } = require('./errors');
   const path = require('path');
 
   const app = express();
 
   const booksRoutes = booksRoutesFactory(db);
-
 
   const startTimer = (req, res, next) => {
     const startTime = new Date();

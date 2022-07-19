@@ -2,7 +2,7 @@ const request = require("supertest");
 
 describe("Book catalog", function() {
     xit("should support CRUD lifecycle", async function() {
-        const db = await require('../../src/connection');
+        const db = await require('../../src/db/db');
         const app = require("../../src/app")(db);
 
         const client = request(app);

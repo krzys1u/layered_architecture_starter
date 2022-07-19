@@ -1,6 +1,6 @@
 const assert = require("assert");
 
-const buildController = require('./../../src/bookController')
+const buildController = require('./../../src/controllers/bookController')
 
 const BOOK_MOCK = {
     title: "JavaScript in Action",

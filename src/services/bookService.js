@@ -1,4 +1,4 @@
-const makeSlug = require('./makeSlug');
+const makeSlug = require('../utils/makeSlug');
 
 const bookServiceFactory = (bookRepository) => {
   return {

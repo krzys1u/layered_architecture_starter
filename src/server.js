@@ -1,5 +1,5 @@
 (async () => {
-    const db = await require('./connection');
+    const db = await require('./db/db');
     const app = require("./app")(db);
 
     app.listen(3000, function () {

@@ -1,8 +1,8 @@
 const assert = require("assert");
 
-const bookServiceFactory = require('../../src/bookService');
-const inMemoryBookRepositoryFactory = require('../../src/inMemoryBookRepository');
-const makeSlug = require('../../src/makeSlug');
+const bookServiceFactory = require('../../src/services/bookService');
+const inMemoryBookRepositoryFactory = require('../../src/repositories/inMemoryBookRepository');
+const makeSlug = require('../../src/utils/makeSlug');
 
 const inMemoryBookRepository = inMemoryBookRepositoryFactory();
 

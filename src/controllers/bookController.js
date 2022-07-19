@@ -1,8 +1,8 @@
 const mapValues = require('lodash.mapvalues');
 
-const responses = require('./responses.js');
+const responses = require('../responses.js');
 
-const {bookLink} = require('./links')
+const {bookLink} = require('../links')
 
 const wrapWithTryCatch = (fn) => {
   return async (req, res, next) => {

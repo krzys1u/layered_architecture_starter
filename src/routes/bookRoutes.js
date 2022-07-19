@@ -1,13 +1,13 @@
-const {BOOK, BOOK_COLLECTION} = require('./links').resources;
+const {BOOK, BOOK_COLLECTION} = require('../links').resources;
 
 module.exports = (db) => {
   const { Router } = require('express');
 
-  const validateBook = require('./validateBookMiddleware');
-  const bookServiceFactory = require('./bookService');
+  const validateBook = require('../middlewares/validateBookMiddleware');
+  const bookServiceFactory = require('../services/bookService');
 
-  const bookRepositoryFactory = require('./bookRepository');
-  const bookControllerFactory = require('./bookController');
+  const bookRepositoryFactory = require('../repositories/bookRepository');
+  const bookControllerFactory = require('../controllers/bookController');
 
   const bookRepository = bookRepositoryFactory(db);
 
