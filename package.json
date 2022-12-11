@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@hapi/joi": "^16.1.8",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "hbs": "^4.0.6",
     "lodash.mapvalues": "^4.6.0",
     "mongodb": "3.3.4"
